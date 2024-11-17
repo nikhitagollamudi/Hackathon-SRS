@@ -8,14 +8,23 @@ import tempfile
 
 def create_pie_chart(positive, negative, neutral):
     """
-    Generate a pie chart for sentiment analysis results and save to a temporary file.
+    Generate a pie chart for sentiment analysis results with space between slices
+    and save to a temporary file.
     """
     labels = ['Positive', 'Negative', 'Neutral']
     sizes = [positive, negative, neutral]
-    colors = ['#6aa84f', '#cc0000', '#f1c232']
+    colors = ['#66c2a5', '#fc8d62', '#8da0cb']
+    explode = [0.05, 0.05, 0.05]  # Add space between the slices
 
     fig, ax = plt.subplots()
-    ax.pie(sizes, labels=labels, autopct='%1.1f%%', colors=colors, startangle=140)
+    ax.pie(
+        sizes, 
+        labels=labels, 
+        autopct='%1.1f%%', 
+        colors=colors, 
+        startangle=140, 
+        explode=explode  # Add spacing between the slices
+    )
     ax.axis('equal')
 
     # Save to a temporary file and return the file path
@@ -23,6 +32,7 @@ def create_pie_chart(positive, negative, neutral):
     plt.savefig(temp_file.name, bbox_inches='tight')
     plt.close(fig)  # Close the figure to free memory
     return temp_file.name
+
 
 
 def create_line_chart(dates, values, prediction=None):

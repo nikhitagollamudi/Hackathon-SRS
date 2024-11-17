@@ -33,7 +33,8 @@ def generate_dynamic_recommendations(industry, kpi, df, api_key):
         f"Based on the provided context, generate 10 specific and actionable recommendations "
         f"that a business in the '{industry}' industry can implement to improve their '{kpi}'. "
         f"Focus exclusively on strategies for '{kpi}' and avoid generic advice.\n"
-        f"Return your recommendations as a numbered list, starting with '1.'."
+        f"Return your recommendations as a numbered list, starting with '1.'. Dont give in bold format."
+        
     )
 
     # Call OpenAI API to generate recommendations
