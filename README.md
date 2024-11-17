@@ -52,7 +52,7 @@ The **Venture Companion** is a data-driven platform designed to empower entrepre
 
 1. **Clone the Repository**:
    ```bash
-  - git clone https://github.com/nikhitagollamudi/Hackathon-SRS
+   git clone https://github.com/nikhitagollamudi/Hackathon-SRS
 2. **Create a virtual environment**:
 
 - Use the command: python -m venv venv
@@ -70,7 +70,7 @@ The **Venture Companion** is a data-driven platform designed to empower entrepre
 - Run: pytest tests/
 
 
-##Contributors
+## Contributors
 - Sai Navya Jyesta
 - Nikhita Gollamudi
 - Venkata Kalyani Vemula
